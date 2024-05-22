@@ -28,3 +28,27 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_length_exceed():
+    result = []
+    input_arr = [64, 34, 25, 12, 22, 11, 90, 68, 32, 76, 17]
+
+    result = Lab3.bubble_sort(input_arr, 0)
+
+    assert (result == 1)
+
+def test_length_empty():
+    result = []
+    input_arr = []
+
+    result = Lab3.bubble_sort(input_arr, 1)
+
+    assert (result == 0)
+
+def test_float_detected():
+    result = []
+    input_arr = [64, 34.3, 25, 12, 22.8, 11, 90]
+
+    result = Lab3.bubble_sort(input_arr, 0)
+
+    assert (result == 2)
